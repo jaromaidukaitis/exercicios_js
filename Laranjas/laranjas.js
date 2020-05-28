@@ -8,19 +8,21 @@ function dividirLaranjas() {
 	divisao = Math.trunc(divisao);
 	var sobra = totalLaranjas % totalVizinhos;
 
-	if (divisao == 0) {
-		resultadoDivisao.innerHTML = `Nenhum vizinho receberá laranjas.`;
-	} else if (divisao == 1) {
-		resultadoDivisao.innerHTML = `Cada vizinho receberá ${divisao} laranja`;
+	if (totalLaranjas <= 0 || totalVizinhos <= 0) {
+		resultadoDivisao.innerHTML = `Por favor, digite uma quantidade positiva de Laranjas e Vizinhos`;
 	} else {
-		resultadoDivisao.innerHTML = `Cada vizinho receberá ${divisao} laranjas.`;
-	}
+		if (divisao == 1) {
+			resultadoDivisao.innerHTML = `Cada vizinho receberá ${divisao} laranja`;
+		} else {
+			resultadoDivisao.innerHTML = `Cada vizinho receberá ${divisao} laranjas.`;
+		}
 
-	if (sobra == 0) {
-		sobraDivisao.innerHTML = ``;
-	} else if (sobra == 1) {
-		sobraDivisao.innerHTML = ` Sobrará ${sobra} laranja!`;
-	} else {
-		sobraDivisao.innerHTML = ` Sobrarão ${sobra} laranjas!`;
+		if (sobra == 0) {
+			sobraDivisao.innerHTML = ``;
+		} else if (sobra == 1) {
+			sobraDivisao.innerHTML = ` Sobrará ${sobra} laranja!`;
+		} else {
+			sobraDivisao.innerHTML = ` Sobrarão ${sobra} laranjas!`;
+		}
 	}
 }
