@@ -7,10 +7,6 @@ function dividirLaranjas() {
 	var divisao = totalLaranjas / totalVizinhos;
 	divisao = Math.trunc(divisao);
 	var sobra = totalLaranjas % totalVizinhos;
-	console.log(totalLaranjas);
-	console.log(totalVizinhos);
-	console.log(divisao);
-	console.log(sobra);
 
 	if (divisao == 0) {
 		resultadoDivisao.innerHTML = `Nenhum vizinho receberá laranjas.`;
