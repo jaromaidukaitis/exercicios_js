@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			function encripta(text, salto) {
+				var arrText = text.split("");
+				var arrTextEncoded = [];
+				var arrTextEncripted = [];
+				var textEncripted;
+				for (var i = 0; i < arrText.length; i++) {
+					arrTextEncoded[i] = arrText[i].charCodeAt(0) + salto;
+					arrTextEncripted[i] = String.fromCharCode(arrTextEncoded[i]);
+				}
+				textEncripted = arrTextEncripted.join("");
+				console.log(arrTextEncoded);
+				console.log(arrTextEncripted);
+				console.log(textEncripted);
+				document.write("O texto encriptado é " + textEncripted + "<br><br>");
+			}
+
+			function revela(text, salto) {
+				var arrTextEncripted = text.split("");
+				var arrTextEncoded = [];
+				var arrText = [];
+				var text;
+				for (var i = 0; i < arrTextEncripted.length; i++) {
+					arrTextEncoded[i] = arrTextEncripted[i].charCodeAt(0) - salto;
+					arrText[i] = String.fromCharCode(arrTextEncoded[i]);
+				}
+				text = arrText.join("");
+				console.log(arrTextEncoded);
+				console.log(arrText);
+				document.write("O texto revelado é " + text + "<br><br>");
+			}
+
+			function revelaTestes(text) {
+				for (var i = 0; i < 26; i++) {
+					revela(text, i);
+				}
+			}
+		</script>
+	</body>
+</html>
