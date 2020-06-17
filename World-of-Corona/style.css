@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: black;
+	color: lightblue;
+	text-align: center;
+	height: 100vh;
+}
+
+h1 {
+	font-size: 50px;
+	margin: 30px;
+	font-family: "Press Start 2P", cursive;
+}
+
+.txtC {
+	font-size: 30px;
+	margin: 60px;
+	font-family: "Lobster Two", cursive;
+}
+
+.btnDiv {
+	margin-top: 50px;
+}
+
+.btn {
+	background: none;
+	border: 2px solid lightblue;
+	color: lightblue;
+	border-radius: 30px;
+	font-size: 14 px;
+	padding: 10px;
+	font-family: "Press Start 2P", cursive;
+	margin: 15px;
+}
+
+.hide {
+	display: none;
+}
+
+ul,
+li {
+	list-style-position: inside;
+}
